@@ -1,0 +1,661 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: Arial, sans-serif;
+	line-height:1.5em;
+}
+
+/* Gerneral Formatting of page via grid. 
+				Header
+				Logo
+Mission Statement	Sprinkles
+				Footer
+ */
+#site_wrap{
+	background-color:white;
+	height:100vh;
+	display:grid;
+	grid-template-columns:
+		1fr
+		repeat(4,minmax(0,272px))		
+		1fr
+	;
+	grid-gap:5px;
+	grid-template-rows:
+		125px
+		112px
+		min-content
+		min-content
+		1fr
+	;
+	grid-template-areas:
+		"header header header header header header"
+		". logo logo logo logo ."
+		". mission_statement mission_statement sprinkler sprinkler ."
+		". backflow_pump backflow_pump content content ."
+		"footer footer footer footer footer footer"
+}
+
+/*basic formating*/
+.mission_statement imgB, .sprinkler img, .backflow_pump img, .content img{
+	max-width:100%;
+}
+.header{
+	background-color:#E8B086;
+	grid-area:header;
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+}
+.header h1{
+	font-size:1.5em;
+	line-height:2.15em;
+	font-weight:bold;
+	color:#21482B;
+	text-transform:uppercase;
+	text-align: left;
+	margin-left:15px;
+}
+.header .nav{
+	list-style: none;
+	padding:0;
+	display:flex;
+}
+.header .nav a{
+	text-decoration:none;
+	border:2px solid grey;
+	border-radius:50em; 
+	background-color:#5FD4D4;
+	color: white;
+	padding:18px 23px;
+	margin:0 10px; 
+	text-transform:uppercase;
+	font-weight: bold; 
+}
+.header .nav a:hover{ 
+	background-color:#F8EEE5;
+	color:#21482B
+}
+.header .nav .active{
+	background-color:#7097E8;
+	color:white;
+}
+.logo{
+	background-color:white;
+	grid-area:logo;
+	display:flex;
+	justify-content: space-around;
+}
+.logo h2{
+	Color:#7097E8;
+	font-size:1.5em;
+	font-weight:bold;
+}
+.mission_statement{
+	grid-area:mission_statement;
+}
+
+
+.box1{
+	height:522px;
+	width:260px;
+	align:right;
+	position:absolute;
+}
+
+.content box1{
+  background-color: #7AE669;
+  width:260px;
+  height:522px;
+  padding:10px;
+  margin:35px;
+  border: 1px solid gray;
+
+}
+.mission_statement p{
+	color:#319421;
+	text-align:center;
+	font-size:1.5em;
+	line-height:2em;
+	font-weight:bold;
+	font-style:italic;
+}
+
+.btn{
+	text-decoration:none;
+	border-radius:50em; 
+	background-color:#DF7D33;
+	color:white;
+	padding:23px 23px; 
+	text-transform:uppercase;
+	font-weight: bold; 
+	text-align:center;
+	display:inline-block;
+	margin-left:30%;
+	alignment-baseline: center;
+}
+
+.btn:hover{
+	background-color:#1f7A1F;
+}
+
+.sprinkler{
+	grid-area:sprinkler;
+}
+.backflow_pump{
+	padding:5em 1em;
+	grid-area:backflow_pump;
+}
+.indexbox2{
+	background-color:#D79B6E;
+	width:536px;
+	height:83px;
+	padding-left:25px;
+	padding-bottom:10px;
+	padding-right:25 px; 
+	padding-top:10px;
+	border:1px solid gray;
+	align: right;
+	position:absolute;
+}
+.indexbox2 h2{
+  	font-size:1.75em;
+	line-height:1.95em;
+}
+.indexbox2 p2{
+  	font-size:1.4em;
+	line-height:1.95em;
+	color:#019421;
+	font-weight:bold;
+ 	font-style:italic;
+ 	text-align: center;
+}
+
+.content{
+	grid-area:content;
+}
+
+.footer{
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	height: 7.5%;
+	background-color:#7097E8;
+	color:white;
+	font-size:.75em;
+	grid-area:footer;
+	text-align:center;
+	padding:1em;
+}
+
+/*phone formatting changes to grid*/
+
+@media screen and (max-width:480px){
+	#site_wrap{
+	
+	grid-template-areas:
+		"logo logo logo logo logo logo"
+		"sprinkler sprinkler sprinkler sprinkler sprinkler sprinkler"
+		"content content content content content content"
+		"footer footer footer footer footer footer";
+	}
+	.header {
+		list-style: none;
+		padding:0;
+		margin:.5em;
+		display:flex;
+		flex-direction: column;
+		grid-template-rows:
+			125px
+			min-content
+			min-content
+			1fr
+		;
+	}	
+	.aqua {
+	 color:#5FD4D4;
+	}
+	.blue{
+	 color:#7097E8;
+	}
+	
+}
+
+/* Home Page Styles */
+#indexbox {
+	height:400px;
+	width:500px;
+	background-color:#adebad;
+	padding:10px;
+	margin:25px;
+	border: 20px;
+	border-color: #000000;
+}
+
+#indexbox p1{
+	color:#1f7a1f;
+	font-size: 2.5em;
+	line-height:1.3em;
+	text-align: center;
+}
+
+#indexbox2 {
+	height:400px;
+	width:500px;
+	background-color:#ffc299;
+	padding:10px;
+	margin:25px;
+	border: 20px;
+	border-color: #000000;
+}
+
+#indexbox2 h2{
+	color:#1f7a1f;
+	font-size: 2.5em;
+	line-height:1.1em;
+	text-align: center;
+}
+
+#indexbox2 p1{
+	color:#1f7a1f;
+	font-size: 1.4em;
+	line-height:1.0em;
+	text-align: center;
+}
+
+
+/* About Page Styles */
+.about-us #box1{
+	height:650px;
+	width:459px;
+	background-color:white;
+	padding:10px;
+}
+	
+.about-us h1{
+	color:#1f7a1f;
+	font-size:2em;
+	line-height:2.6em;
+	text-align:left;
+	margin-top: 0px;
+}
+
+.about-us p{
+	color:#1f7a1f;
+	font-size: 1em;
+	text-align:left;
+}
+
+.about-us p1{
+	color: #1f7a1f;
+	font-size: 2em;
+}
+
+.about-us ul{
+	color:#1f7a1f;
+}
+
+.about-preston button{
+	background-color:#DF7D33;
+	color:white;
+	text-align:center;
+	float:right;
+}
+
+.preston{
+	height:144px;
+	width:144px;
+	float:left;
+	margin:5px;
+}
+
+.content #box2{
+	background-color:white;
+	font-size:1.5em;
+	line-height:1.93em;
+	align:right;
+	height:235px;
+	width:369px;
+}
+
+.about-preston{
+	border: 2px;
+	border-style: solid;
+	border-color: green;
+}
+
+.about-preston h3{
+	color:black;
+	font-size:1.5em;
+	text-align:left;
+}
+
+.about-preston p{
+	font-size: 1em;
+	padding: 10px;
+}
+
+.about-sean{
+	margin-top: 10px;
+	border: 2px;
+	border-style: solid;
+	border-color: green;
+}
+
+.about-sean h3{
+	color:black;
+	font-size:1.5em;
+	text-align:center;
+}
+
+.about-sean p{
+	font-size: 1em;
+	padding: 10px;
+}
+
+.content h2, p{
+	font-size:1.5em;
+	line-height:1.5em;
+}
+
+.sean{
+	height:151px;
+	width:151px;
+	float:right;
+}
+
+
+/*Services Styles */
+
+.servicesTitle h3{
+	color:#DF7D33;
+	font-size:2.5em;
+	text-align:Center;
+	vertical-align:top;
+	margin-bottom: 8px;
+}
+
+/*Box 1*/
+#whitebox1{
+	height:350px;
+	width:500px;
+	background-color:#cccccc;
+	padding:10px;
+	margin:25px;
+	margin-top:8px;
+}
+
+#whitebox1 h4{
+	color:#21482B;
+	font-size:1.5em;
+	text-align:left;
+	vertical-align:top;
+}
+
+#whitebox1 p1{
+	color:#1f7a1f;
+	font-size:1em;
+	vertical-align:top;
+}
+	
+.irrigation{
+	height:209px;
+	width:246px;
+	float: right;
+}
+
+/*Box 2*/
+#whitebox2{
+	height:425px;
+	width:500px;
+	background-color:#cccccc;
+	padding:10px;
+	margin:25px
+}
+
+#whitebox2 h4{
+	color:#21482B;
+	font-size:1.5em;
+	text-align:left;
+	vertical-align:top;
+}
+
+#whitebox2 p1{
+	color:#1f7a1f;
+	font-size:1em;
+	text-align:left;
+	vertical-align:top;
+}
+
+.landscaping{
+	height:174.5px;
+	width:443.64px;
+	vertical-align:top;
+}
+
+/*Box 3*/
+#whitebox3{
+	height:425px;
+	width:500px;
+	background-color:#cccccc;
+	padding:10px;
+	margin:25px
+}
+
+#whitebox3 h4{
+	color:#21482B;
+	font-size:1.5em;
+	text-align:left;
+	vertical-align:top;
+}
+
+#whitebox3 p1{
+	color:#1f7a1f;
+	font-size:1em;
+	text-align:left;
+	vertical-align:top;
+}
+
+.backflowtesting{
+	height:211px;
+	width:312.42px;
+	vertical-align:bottom;
+	float: left;
+}
+
+/*Box 4*/
+#whitebox4{
+	height:425px;
+	width:500px;
+	background-color:#cccccc;
+	padding:10px;
+	margin:25px
+}
+
+#whitebox4 h4{
+	color:#21482B;
+	font-size:1.5em;
+	text-align:left;
+	vertical-align:top;
+}
+
+#whitebox4 p1{
+	color:#1f7a1f;
+	font-size:1em;
+	text-align:left;
+	vertical-align:top;
+}
+
+.snowremoval{
+	height:223px;
+	width:289px;
+	vertical-align:bottom;
+	float:right;
+}
+
+
+
+/* Testimonials Styles */
+
+.testimonials{
+	background-color:#adebad;
+	padding:10px;
+	margin:25px;
+	color:#21482B;
+}
+
+.testimonials h1{
+	color:#330a00;
+	font-size:2.5em;
+	text-align:center;
+	vertical-align:middle;
+	line-height:1.3em;
+}
+	
+.testimonials p1{
+	color:#661400;
+	font-size:1.5em;
+	text-align:center;
+	vertical-align:middle;
+}
+	
+.testimonials p2{
+	color:#21482B;
+	font-size:1em;
+	text-align:center;
+	vertical-align:middle;
+}
+	
+.button{
+	background-color:#DF7D33;
+	color:white;
+	font-size:1em;
+	padding:10px;
+	float:bottom, center;
+}
+
+.patio{
+	height:250px;
+	width:425px;
+	vertical-align:top;
+}
+
+.wall{
+	height:300px;
+	width:425px;
+	vertical-align:top;
+}
+
+.landscape{
+	height:250px;
+	width:425px;
+	vertical-align:top;
+}
+	
+
+/* Contact Us Styles */
+.box1{
+	height:717px;
+	width:735px;
+	background-color:#019421;
+	padding:40px;
+}
+.content h1{
+	color:white;
+	font-size:2.65em;
+	text-align:center;
+}
+.content p1{
+	color:#21482B;
+	font-size:1.5em;
+	text-align:left;
+	vertical-align:middle;
+}
+.box2{
+	height:444px;
+	width:307px;
+	background-color:#7AE669;
+	padding:15px;
+}
+.content h1{
+	color:#1482B;
+	font-size:2.4em;
+	text-align:center;
+}
+.content p2{
+	color:#21482B;
+	font-size:1.5em;
+	text-align:center;
+	padding:20px;
+}
+.img .firepit{
+	height:370px;
+	width:494px;
+	align:right;
+	vertical-align:bottom
+}
+	
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
