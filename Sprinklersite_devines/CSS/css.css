@@ -95,7 +95,6 @@ Mission Statement	Sprinkles
 	grid-area:mission_statement;
 }
 
-
 .box1{
 	height:522px;
 	width:260px;
@@ -180,13 +179,13 @@ Mission Statement	Sprinkles
     left: 0;
     bottom: 0;
     width: 100%;
-	height: 7.5%;
+	height: 5%;
 	background-color:#7097E8;
 	color:white;
-	font-size:.75em;
+	font-size:1.25em;
 	grid-area:footer;
 	text-align:center;
-	padding:1em;
+	padding:.5%;
 }
 
 /*phone formatting changes to grid*/
@@ -473,7 +472,7 @@ Mission Statement	Sprinkles
 	margin:25px
 }
 
-#whitebox4 h4{
+#whitebox4 h6{
 	color:#21482B;
 	font-size:1.5em;
 	text-align:left;
