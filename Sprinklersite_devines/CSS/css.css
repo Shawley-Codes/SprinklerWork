@@ -22,7 +22,7 @@ Mission Statement	Sprinkles
 	;
 	grid-gap:5px;
 	grid-template-rows:
-		125px
+		10%
 		112px
 		min-content
 		min-content
@@ -221,153 +221,9 @@ Mission Statement	Sprinkles
 	
 }
 
-/* Home Page Styles */
-#indexbox {
-	height:400px;
-	width:500px;
-	background-color:#adebad;
-	padding:10px;
-	margin:25px;
-	border: 20px;
-	border-color: #000000;
-}
-
-#indexbox p1{
-	color:#1f7a1f;
-	font-size: 2.5em;
-	line-height:1.3em;
-	text-align: center;
-}
-
-#indexbox2 {
-	height:400px;
-	width:500px;
-	background-color:#ffc299;
-	padding:10px;
-	margin:25px;
-	border: 20px;
-	border-color: #000000;
-}
-
-#indexbox2 h2{
-	color:#1f7a1f;
-	font-size: 2.5em;
-	line-height:1.1em;
-	text-align: center;
-}
-
-#indexbox2 p1{
-	color:#1f7a1f;
-	font-size: 1.4em;
-	line-height:1.0em;
-	text-align: center;
-}
-
-
-/* About Page Styles */
-.about-us #box1{
-	height:650px;
-	width:459px;
-	background-color:white;
-	padding:10px;
-}
-	
-.about-us h1{
-	color:#1f7a1f;
-	font-size:2em;
-	line-height:2.6em;
-	text-align:left;
-	margin-top: 0px;
-}
-
-.about-us p{
-	color:#1f7a1f;
-	font-size: 1em;
-	text-align:left;
-}
-
-.about-us p1{
-	color: #1f7a1f;
-	font-size: 2em;
-}
-
-.about-us ul{
-	color:#1f7a1f;
-}
-
-.about-preston button{
-	background-color:#DF7D33;
-	color:white;
-	text-align:center;
-	float:right;
-}
-
-.preston{
-	height:144px;
-	width:144px;
-	float:left;
-	margin:5px;
-}
-
-.content #box2{
-	background-color:white;
-	font-size:1.5em;
-	line-height:1.93em;
-	align:right;
-	height:235px;
-	width:369px;
-}
-
-.about-preston{
-	border: 2px;
-	border-style: solid;
-	border-color: green;
-}
-
-.about-preston h3{
-	color:black;
-	font-size:1.5em;
-	text-align:left;
-}
-
-.about-preston p{
-	font-size: 1em;
-	padding: 10px;
-}
-
-.about-sean{
-	margin-top: 10px;
-	border: 2px;
-	border-style: solid;
-	border-color: green;
-}
-
-.about-sean h3{
-	color:black;
-	font-size:1.5em;
-	text-align:center;
-}
-
-.about-sean p{
-	font-size: 1em;
-	padding: 10px;
-}
-
-.content h2, p{
-	font-size:1.5em;
-	line-height:1.5em;
-}
-
-.sean{
-	height:151px;
-	width:151px;
-	float:right;
-}
-
-
 /*Services Styles */
 
-.servicesTitle h3{
+.screenTitle h3{
 	color:#DF7D33;
 	font-size:2.5em;
 	text-align:Center;
@@ -490,6 +346,107 @@ Mission Statement	Sprinkles
 	height:223px;
 	width:289px;
 	vertical-align:bottom;
+	float:right;
+}
+
+
+/* About Page Styles */
+.about-us #box1{
+	height:650px;
+	width:459px;
+	background-color:white;
+	padding:10px;
+}
+	
+.about-us h1{
+	color:#1f7a1f;
+	font-size:2em;
+	line-height:2.6em;
+	text-align:left;
+	margin-top: 0px;
+}
+
+.about-us p{
+	color:#1f7a1f;
+	font-size: 1em;
+	text-align:left;
+}
+
+.about-us p1{
+	color: #1f7a1f;
+	font-size: 2em;
+}
+
+.about-us ul{
+	color:#1f7a1f;
+}
+
+.about-preston button{
+	background-color:#DF7D33;
+	color:white;
+	text-align:center;
+	float:right;
+}
+
+.preston{
+	height:144px;
+	width:144px;
+	float:left;
+	margin:5px;
+}
+
+.content #box2{
+	background-color:white;
+	font-size:1.5em;
+	line-height:1.93em;
+	align:right;
+	height:235px;
+	width:369px;
+}
+
+.about-preston{
+	border: 2px;
+	border-style: solid;
+	border-color: green;
+}
+
+.about-preston h3{
+	color:black;
+	font-size:1.5em;
+	text-align:left;
+}
+
+.about-preston p{
+	font-size: 1em;
+	padding: 10px;
+}
+
+.about-sean{
+	margin-top: 10px;
+	border: 2px;
+	border-style: solid;
+	border-color: green;
+}
+
+.about-sean h3{
+	color:black;
+	font-size:1.5em;
+	text-align:center;
+}
+
+.about-sean p{
+	font-size: 1em;
+	padding: 10px;
+}
+
+.content h2, p{
+	font-size:1.5em;
+	line-height:1.5em;
+}
+
+.sean{
+	height:151px;
+	width:151px;
 	float:right;
 }
 
