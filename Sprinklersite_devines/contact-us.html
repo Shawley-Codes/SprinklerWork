@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale, minimum-scale, maximim-scale" />
 	<title>Sprinkler Repair Park City</title>
 	<link rel="stylesheet" type="text/css" href="../Sprinklersite_devines/css.css" />
+	<script defer src="Datacapture.js"></script>
 </head>
 
 <body>
@@ -28,13 +29,13 @@
 		</div>
 		<div class="mission_statement">
 				<div class="container">
-					  <form action="/action_page.php">
+					<form id="dataform" action="javascript:;" onsubmit="getData()">
 					  <div class="row">
 						<div class="col-25">
 						  <label for="fname">First Name</label>
 						</div>
 						<div class="col-75">
-						  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+						  <input type="text" id="fname" name="firstname" placeholder="Your First Name..">
 						</div>
 					  </div>
 					  <div class="row">
@@ -42,7 +43,7 @@
 						  <label for="lname">Last Name</label>
 						</div>
 						<div class="col-75">
-						  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+						  <input type="text" id="lname" name="lastname" placeholder="Your Last Name..">
 						</div>
 					  </div>
 					  <div class="row">
@@ -74,14 +75,14 @@
 						  <label for="subject">Subject</label>
 						</div>
 						<div class="col-75">
-						  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+						  <textarea id="subject" name="subject" placeholder="Tell us how we can help you.." style="height:200px"></textarea>
 						</div>
 					  </div>
 					  <div class="row">
-						<input type="submit" value="Submit">
+						<input id="submit" type="submit" value="Submit" name="submit">
 					  </div>
-					  </form>
-					</div>
+					</form>
+				</div>
 
 			</div>
 			<div class="sprinkler">
