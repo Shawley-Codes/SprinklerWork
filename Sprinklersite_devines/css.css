@@ -13,14 +13,14 @@ Mission Statement	Sprinkles
  */
 #site_wrap{
 	background-color:white;
-	height:100vh;
+	height:75vh;
 	display:grid;
 	grid-template-columns:
 		1fr
 		repeat(4,minmax(0,272px))		
 		1fr
 	;
-	grid-gap:5px;
+	grid-gap:1%;
 	grid-template-rows:
 		10%
 		112px
@@ -122,10 +122,10 @@ Mission Statement	Sprinkles
 
 .btn{
 	text-decoration:none;
-	border-radius:50em; 
+	border-radius:25em; 
 	background-color:#DF7D33;
 	color:white;
-	padding:23px 23px; 
+	padding:10px 10px; 
 	text-transform:uppercase;
 	font-weight: bold; 
 	text-align:center;
@@ -228,50 +228,211 @@ Mission Statement	Sprinkles
 	font-size:2.5em;
 	text-align:Center;
 	vertical-align:top;
-	margin-bottom: 8px;
+	
 }
 
 /*card styles*/
+
+:root{
+	--clr-neutral-900: hsl(207, 19%, 9%);
+	--clr-neutral-100: hsl(0, 0%, 100%);
+	--clr-neutral-400: hsl(142 90% 61%);
+}
+
 .card {
 	color: var(--clr-neutral-100);
-	background-image: url(Images/Group_38@2x.png);
+	background-image: url(Images/Group_26@2x.png);
 	background-size: cover;
-	padding: 10rem 0 0;
+	padding: 15% 0 0;
 	max-width: 75ch;
 	border-radius: 1rem;
 	overflow: hidden;
+	margin-bottom: 2%;
+	
+	transition: transform 250ms ease;
+}
+
+.card:hover {
+	transform: scale(1.02);
+}
+
+.card:hover .card-title::after {
+	transform: scaleX(0);
+}
+
+.card:hover .card-content0 {
+	transform: translateY(0);
+	transition-delay: 150ms;
+}
+
+.card:hover .card-content0 > *:not(.card-title) {
+	opacity: 1;
+	transition: opacity 350ms linear;
+	transition-delay: 350ms;
+}
+
+
+.card1 {
+	color: var(--clr-neutral-100);
+	background-image: url(Images/Panorama_about.png);
+	background-size: cover;
+	padding: 15% 0 0;
+	max-width: 75ch;
+	border-radius: 1rem;
+	overflow: hidden;
+	margin-bottom: 2%;
+	
+	transition: transform 250ms ease;
+}
+
+.card1:hover {
+	transform: scale(1.02);
+}
+
+.card1:hover .card-title::after {
+	transform: scaleX(0);
+}
+
+.card1:hover .card-content {
+	transform: translateY(0);
+	transition-delay: 150ms;
+}
+
+.card1:hover .card-content > *:not(.card-title) {
+	opacity: 1;
+	transition: opacity 350ms linear;
+	transition-delay: 350ms;
+}
+
+.card2 {
+	color: var(--clr-neutral-100);
+	background-image: url(Images/Group_28.png);
+	background-size: cover;
+	padding: 15% 0 0;
+	max-width: 75ch;
+	border-radius: 1rem;
+	overflow: hidden;
+	margin-bottom: 2%;
+	
+	transition: transform 250ms ease;
+}
+
+.card2:hover {
+	transform: scale(1.02);
+}
+
+.card2:hover .card-title::after {
+	transform: scaleX(0);
+}
+
+.card2:hover .card-content {
+	transform: translateY(0);
+	transition-delay: 150ms;
+}
+
+.card2:hover .card-content > *:not(.card-title) {
+	opacity: 1;
+	transition: opacity 350ms linear;
+	transition-delay: 350ms;
+}
+
+.card3 {
+	color: var(--clr-neutral-100);
+	background-image: url(Images/Group_35@2x.png);
+	background-size: cover;
+	padding: 15% 0 0;
+	max-width: 75ch;
+	border-radius: 1rem;
+	overflow: hidden;
+	margin-bottom: 10%;
+	
+	transition: transform 250ms ease;
+}
+
+.card3:hover {
+	transform: scale(1.02);
+}
+
+.card3:hover .card-title::after {
+	transform: scaleX(0);
+}
+
+.card3:hover .card-content {
+	transform: translateY(0);
+	transition-delay: 150ms;
+}
+
+.card3:hover .card-content > *:not(.card-title) {
+	opacity: 1;
+	transition: opacity 350ms linear;
+	transition-delay: 350ms;
 }
 
 .card-content {
 	--padding: 3rem;
 	padding: 1.5em;
 	background: linear-gradient(
-		hs1(0 0% 0% / 0),
-		hs1(20 0% 0% / .3) 20%,
-		hs1(0 0% 0% / 1)
+		hsl(0 0% 0% / 0),
+		hsl(20 0% 0% / .3) 20%,
+		hsl(0 0% 0% / 1)
 	);
+	
+	transform: translateY(65%);
+	transition: transform 100ms ease;
+	
+}
+
+.card-content0 {
+	--padding: 3rem;
+	padding: 1.5em;
+	background: linear-gradient(
+		hsl(0 0% 0% / 0),
+		hsl(20 0% 0% / .3) 20%,
+		hsl(0 0% 0% / 1)
+	);
+	
+	transform: translateY(55%);
+	transition: transform 100ms ease;
+	
+}
+
+.card-content > *:not(.card-title) {
+	opacity: 0;
+}
+
+.card-content0 > *:not(.card-title) {
+	opacity: 0;
 }
 
 .card-title {
 	position: relative;
 	width: max-content;
+	color: #eeeee4;
+	font-size:1.5em;
+	text-align:left;
+	vertical-align:top;
 }
 
 .card-title::after{
 	content: "";
 	position: absolute;
 	height: 4px;
-	left: calc(var(--padding) * -1);
-	bottom: 0;
+	left: 0;
+	bottom: -2px;
 	width: 100%;
-	background: var(--clr-accent-400);
+	background: #DF7D33;
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform 250ms ease;
 }
 
 .card-body{
-	color: rgb(255 255 255 / .8);
+	line-height: 1.0;
+	font-size: 1.2em;
+	color: #eeeee4;
 }
 
-.button {
+/*.button {
 	cursor: pointer;
 	display: inline-block;
 	text-decoration: none;
@@ -283,9 +444,10 @@ Mission Statement	Sprinkles
 .button:hover,
 .button:focus {
 	background-color: var(--clr-neutral-100);
-}
+}*/
 
-/*Box 1*/
+/*Box 1
+
 #whitebox1{
 	height:350px;
 	width:500px;
@@ -313,8 +475,9 @@ Mission Statement	Sprinkles
 	width:246px;
 	float: right;
 }
+*/
 
-/*Box 2*/
+/*Box 2
 #whitebox2{
 	height:425px;
 	width:500px;
@@ -342,8 +505,9 @@ Mission Statement	Sprinkles
 	width:443.64px;
 	vertical-align:top;
 }
-
-/*Box 3*/
+ */
+ 
+/*Box 3
 #whitebox3{
 	height:425px;
 	width:500px;
@@ -372,8 +536,9 @@ Mission Statement	Sprinkles
 	vertical-align:bottom;
 	float: left;
 }
+*/
 
-/*Box 4*/
+/*Box 4
 #whitebox4{
 	height:425px;
 	width:500px;
@@ -402,7 +567,7 @@ Mission Statement	Sprinkles
 	vertical-align:bottom;
 	float:right;
 }
-
+*/
 
 /* About Page Styles */
 .about-us #box1{
@@ -537,13 +702,13 @@ Mission Statement	Sprinkles
 	vertical-align:middle;
 }
 	
-.button{
+/*.button{
 	background-color:#DF7D33;
 	color:white;
 	font-size:1em;
 	padding:10px;
 	float:bottom, center;
-}
+}*/
 
 .patio{
 	height:250px;
