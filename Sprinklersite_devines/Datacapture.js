@@ -20,9 +20,11 @@ const workSheetColumnName = [
 
 const workSheetName = 'Users';
 const filePath = './Output/customer-information.xlsx';
+var customerdata = [];
 
-function exportToExcel(){
+document.getElementById("submit").onclick = function (){
 	alert("Export");
-	dataform.
+	//dataform.
+	//need to get either office add ins or json
 }
 //const exportUsersToExcel(users, workSheetColumnName, workSheetName, filePath);
